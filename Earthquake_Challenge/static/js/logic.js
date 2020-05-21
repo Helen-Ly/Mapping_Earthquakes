@@ -168,12 +168,12 @@ d3.json('https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/
     // Creating a GeoJSON layer with the retrieved data
 	L.geoJson(data, {
 
-        // We turn each feature into a polygon on the map
+        // We turn each feature into a linestring on the map
         pointToLayer: function(feature, latlng) {
-            return L.polygon(latlng);
+            return L.lineString(latlng);
         },
         
-        // We set the style for the polygon using our styleInfo function
+        // We set the style for each linestring using our styleInfo function
         style: styleInfo,
 
         
